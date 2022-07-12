@@ -6,7 +6,7 @@ terraform {
     }
   }
 backend "s3" {
-    bucket = "Manikandan-upgrad"
+    bucket = "manikandan-upgrad"
     key    = "assignment/tfstate"
     region = "us-east-1"
   }
