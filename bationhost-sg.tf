@@ -1,12 +1,12 @@
 data "http" "icanhazip" {
-   url = "http://icanhazip.com"
+   url = "http://ipv4.icanhazip.com"
 }
 resource "aws_security_group" "ingress-all-test" {
 name = "bastion-host-sg"
 vpc_id = module.vpc.vpc_id
 ingress {
     cidr_blocks = [
-      "${chomp(data.http.icanhazip.body)}/32"
+      "${chomp(data.http.icanhazip.body)}/22"
     ]
 from_port = 22
     to_port = 22
