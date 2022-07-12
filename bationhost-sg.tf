@@ -6,7 +6,7 @@ name = "bastion-host-sg"
 vpc_id = module.vpc.vpc_id
 ingress {
     cidr_blocks = [
-      "${chomp(data.http.icanhazip.body)}/22"
+      "${chomp(data.http.icanhazip.body)}/32"
     ]
 from_port = 22
     to_port = 22
